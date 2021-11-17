@@ -110,7 +110,7 @@ async def showinfo(client, message):
     )
 
 
-@trojanz.on_message((filters.private | filters.group) & filters.command('status'))
+@DARKWEBLOAD.on_message((filters.private | filters.group) & filters.command('status'))
 async def bot_status(client,message):
     if str(message.from_user.id) not in Config.AUTH_USERS:
         return
@@ -243,12 +243,12 @@ async def help(client, message):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("How to Deploy?", url="https://youtu.be/hkmc3e7U7R4"),
+                    InlineKeyboardButton("JOIN FOR MORE", url="https://t.me/joinchat/FYBCIcMfr0AyOTFl"),
                     InlineKeyboardButton("About Me", callback_data="about_data")
                 ],
                 [
-                    InlineKeyboardButton("BOT Channel", url="https://t.me/TroJanzHEX"),
-                    InlineKeyboardButton("Support Group", url="https://t.me/TroJanzSupport")
+                    InlineKeyboardButton("Update Channel", url="https://t.me/joinchat/FYBCIcMfr0AyOTFl"),
+                    InlineKeyboardButton("Our Group", url="https://t.me/cinemahubmoviesS")
                 ]
             ]
         ),
@@ -256,7 +256,7 @@ async def help(client, message):
     )
 
 
-@trojanz.on_message(filters.command('about') & filters.private)
+@DARKWEBLOAD.on_message(filters.command('about') & filters.private)
 async def about(client, message):
     await message.reply_text(
         text=Script.ABOUT_MSG,
@@ -265,7 +265,7 @@ async def about(client, message):
             [
                 [
                     InlineKeyboardButton(
-                        "SOURCE CODE", url="https://github.com/TroJanzHEX/Unlimited-Filter-Bot")
+                        "😇 SOURCE CODE", url="https://t.me/MyGithubSorceCode")
                 ],
                 [
                     InlineKeyboardButton("BACK", callback_data="help_data"),
